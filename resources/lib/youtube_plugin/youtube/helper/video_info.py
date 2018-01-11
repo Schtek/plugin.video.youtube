@@ -751,8 +751,6 @@ class VideoInfo(object):
             data[mime][i]['indexRange'] = stream_map.get('index')
             data[mime][i]['init'] = stream_map.get('init')
 
-            #data[mime][i]['audioSamplingRate'] =
-
 
 
         out = '<?xml version="1.0" encoding="UTF-8"?>' + \
@@ -767,7 +765,6 @@ class VideoInfo(object):
             out += '<Role schemeIdUri="urn:mpeg:DASH:role:2011" value="main"/>\n'
             for i in data[mime]:
                 if 'audio' in mime:
-                    # audioSamplingRate="48000" was here before
                     out += '<Representation id="' + i + '" ' + data[mime][i]['codecs'] + \
                         ' bandwidth="' + data[mime][i]['bandwidth'] + \
                         '">\n'
