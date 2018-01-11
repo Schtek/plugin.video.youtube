@@ -589,10 +589,6 @@ class VideoInfo(object):
         data = result.text
         params = dict(urlparse.parse_qsl(data))
 
-        with open('/storage/somefile.txt', 'w') as the_file:
-            the_file.write(data)
-
-
         meta_info = {'video': {},
                      'channel': {},
                      'images': {},
